@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "226BF7B4AE8EB057AB54787F7DCF905B624E3D51",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "226BF7B4AE8EB057AB54787F7DCF905B624E3D51" : 9223372036854775807,
+    "3CCF31241C04A46A70B2ED63F3F9B754376D6710" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "D4E661BA-5F7E-4B93-8327-219265F18DF6",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "226BF7B4AE8EB057AB54787F7DCF905B624E3D51" : "AC3.2-AnimationBasics\/",
+    "3CCF31241C04A46A70B2ED63F3F9B754376D6710" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "AC3.2-AnimationBasics",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "AC3.2-AnimationBasics.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/amtung\/AC3.2-AnimationBasics.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "226BF7B4AE8EB057AB54787F7DCF905B624E3D51"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/amtung\/AC3.2.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "3CCF31241C04A46A70B2ED63F3F9B754376D6710"
+    }
+  ]
+}
