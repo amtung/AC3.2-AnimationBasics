@@ -10,6 +10,7 @@ import UIKit
 import SnapKit
 
 class ViewController: UIViewController {
+    
     static let animationDuration: TimeInterval = 4.0
     static let squareSize = CGSize(width: 100.0, height: 100.0)
     
@@ -39,25 +40,18 @@ class ViewController: UIViewController {
         //    self.animateOrangeView()
     }
     
-    internal func resetAnimations() {
-        let _ = [darkBlueAnimator, tealAnimator, yellowAnimator, orangeAnimator].map{ $0.isReversed = true } // { $0.stopAnimation(true) }
-        
-        darkBlueAnimator.addCompletion { (position: UIViewAnimatingPosition) in
-            switch position {
-            case .start: print("Just started")
-            case .end: print("Just ended")
-            case .current: print("In progress")
-            }
-        }
-        //        UIViewPropertyAnimator(duration: 1.0, curve: .linear) {
-        //            let _ = [self.darkBlueView, self.tealView, self.yellowView, self.orangeView].map{ $0.transform = CGAffineTransform.identity }
-        //        }.startAnimation()
-        
-        UIViewPropertyAnimator(duration: 3.0, controlPoint1: CGPoint(x: 0.97, y: 0), controlPoint2: CGPoint(x: 0.01, y: 1.01)) {
-            let _ = [self.darkBlueView, self.tealView, self.yellowView, self.orangeView].map{ $0.transform = CGAffineTransform.identity }
-            }.startAnimation()
-        
-        configureConstraints()
+    // MARK: - Set up
+    
+    private func setupViewHierarchy() {
+        self.view.backgroundColor = .white
+        // views
+        self.view.addSubview(darkBlueView)
+        self.view.addSubview(tealView)
+        self.view.addSubview(yellowView)
+        self.view.addSubview(orangeView)
+        // button
+        self.view.addSubview(animateButton)
+        self.view.addSubview(resetAnimationsButton)
     }
     
     private func configureConstraints() {
@@ -100,26 +94,13 @@ class ViewController: UIViewController {
         }
     }
     
-    private func setupViewHierarchy() {
-        self.view.backgroundColor = .white
-        // views
-        self.view.addSubview(darkBlueView)
-        self.view.addSubview(tealView)
-        self.view.addSubview(yellowView)
-        self.view.addSubview(orangeView)
-        // button
-        self.view.addSubview(animateButton)
-        self.view.addSubview(resetAnimationsButton)
-    }
-    
     private func addGesturesAndActions() {
         self.animateButton.addTarget(self, action: #selector(animateViews), for: .touchUpInside)
         self.resetAnimationsButton.addTarget(self, action: #selector(resetAnimations), for: .touchUpInside)
     }
     
-    // MARK: - Animations
-    
     // MARK: Property Animator
+    
     internal func animateViews() {
         //    animateDarkBlueViewWithSnapkit()
         animateBlueViewWithAnimator()
@@ -128,6 +109,29 @@ class ViewController: UIViewController {
         animateYellowView()
     }
     
+    // MARK: - Animations
+    
+    internal func resetAnimations() {
+        let _ = [darkBlueAnimator, tealAnimator, yellowAnimator, orangeAnimator].map{ $0.isReversed = true } // { $0.stopAnimation(true) }
+        
+        darkBlueAnimator.addCompletion { (position: UIViewAnimatingPosition) in
+            switch position {
+            case .start: print("Just started")
+            case .end: print("Just ended")
+            case .current: print("In progress")
+            }
+        }
+        //        UIViewPropertyAnimator(duration: 1.0, curve: .linear) {
+        //            let _ = [self.darkBlueView, self.tealView, self.yellowView, self.orangeView].map{ $0.transform = CGAffineTransform.identity }
+        //        }.startAnimation()
+        
+        UIViewPropertyAnimator(duration: 3.0, controlPoint1: CGPoint(x: 0.97, y: 0), controlPoint2: CGPoint(x: 0.01, y: 1.01)) {
+            let _ = [self.darkBlueView, self.tealView, self.yellowView, self.orangeView].map{ $0.transform = CGAffineTransform.identity }
+            }.startAnimation()
+        
+        configureConstraints()
+    }
+
     internal func animateDarkBlueViewWithSnapkit() {
         //    let newFrame = darkBlueView.frame.offsetBy(dx: 100.0, dy: 400.0)
         
@@ -170,7 +174,6 @@ class ViewController: UIViewController {
         darkBlueAnimator.startAnimation()
     }
     
-    // Note: It is also possible to write these functions (animateTeal, animateYellow, animateOrange, etc.) in a single one, but you still need to ensure you use different animator objects to be able to define the different animation curves
     internal func animateTealView() {
         tealView.snp.remakeConstraints { (view) in
             view.trailing.equalToSuperview().inset(20.0)
@@ -213,7 +216,8 @@ class ViewController: UIViewController {
         orangeAnimator.startAnimation()
     }
     
-    // MARK: Frames
+    // MARK: - Frames
+    
     internal func animateDarkBlueViewWithFrames() {
         // 1. The view starts off with an initial frame of (x: 20, y: 20, w: 100, h: 100)
         //    due to the constraints we've set for it
@@ -232,6 +236,7 @@ class ViewController: UIViewController {
     }
     
     // MARK: - Lazy Inits
+    
     internal lazy var darkBlueView: UIView = {
         let view: UIView = UIView()
         view.backgroundColor = Colors.darkBlue

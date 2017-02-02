@@ -14,6 +14,7 @@
 		14CFEC3B1E367AFE00BD46CF /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14CFEC3A1E367AFE00BD46CF /* Utility.swift */; };
 		14CFEC3E1E36B4BB00BD46CF /* TouchAnimatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14CFEC3D1E36B4BB00BD46CF /* TouchAnimatorViewController.swift */; };
 		2EF780C482C92007ED967AFB /* Pods_AC3_2_AnimationBasics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFBE7EBF1E6DAA546F8B671D /* Pods_AC3_2_AnimationBasics.framework */; };
+		9CC6A9821E42AAD100E9843A /* PracticeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC6A9811E42AAD100E9843A /* PracticeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		14CFEC3A1E367AFE00BD46CF /* Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Utility.swift; path = Utility/Utility.swift; sourceTree = "<group>"; };
 		14CFEC3D1E36B4BB00BD46CF /* TouchAnimatorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TouchAnimatorViewController.swift; path = Demos/TouchAnimatorViewController.swift; sourceTree = "<group>"; };
 		6447900C60C0E843BE747686 /* Pods-AC3.2-AnimationBasics.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AC3.2-AnimationBasics.release.xcconfig"; path = "Pods/Target Support Files/Pods-AC3.2-AnimationBasics/Pods-AC3.2-AnimationBasics.release.xcconfig"; sourceTree = "<group>"; };
+		9CC6A9811E42AAD100E9843A /* PracticeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PracticeViewController.swift; sourceTree = "<group>"; };
 		AFBE7EBF1E6DAA546F8B671D /* Pods_AC3_2_AnimationBasics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AC3_2_AnimationBasics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B558B66F2EF9FE69DC48D946 /* Pods-AC3.2-AnimationBasics.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AC3.2-AnimationBasics.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AC3.2-AnimationBasics/Pods-AC3.2-AnimationBasics.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -86,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				14CFEC3D1E36B4BB00BD46CF /* TouchAnimatorViewController.swift */,
+				9CC6A9811E42AAD100E9843A /* PracticeViewController.swift */,
 			);
 			name = Demos;
 			sourceTree = "<group>";
@@ -232,6 +235,7 @@
 				14CFEC2A1E3577BC00BD46CF /* ViewController.swift in Sources */,
 				14CFEC281E3577BC00BD46CF /* AppDelegate.swift in Sources */,
 				14CFEC3B1E367AFE00BD46CF /* Utility.swift in Sources */,
+				9CC6A9821E42AAD100E9843A /* PracticeViewController.swift in Sources */,
 				14CFEC3E1E36B4BB00BD46CF /* TouchAnimatorViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
